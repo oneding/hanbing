@@ -246,6 +246,27 @@
     });
   }
 
+  /* ── 移动端导航：汉堡菜单开合 ───────────────────────────────────────── */
+  var navToggle = document.getElementById('nav-toggle');
+  var siteNav = document.getElementById('site-nav');
+  if (navToggle && siteNav) {
+    navToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = siteNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', function (e) {
+      if (siteNav.classList.contains('open') &&
+          !siteNav.contains(e.target) && !navToggle.contains(e.target)) {
+        siteNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    siteNav.addEventListener('click', function (e) {
+      if ((e.target.tagName || '') === 'A') siteNav.classList.remove('open');
+    });
+  }
+
   /* ── 分享：浮动按钮 + 微信二维码 / 微博 / QQ 空间 / 复制链接 ─────────── */
   var fab = document.getElementById('share-fab');
   var pop = document.getElementById('share-pop');
@@ -355,7 +376,10 @@
       if (binput) { e.preventDefault(); binput.focus(); }
       else if (overlay) { e.preventDefault(); openSearch(); }
     }
-    if (e.key === 'Escape') { closeSearch(); closeShare(); closeQr(); }
+    if (e.key === 'Escape') {
+      closeSearch(); closeShare(); closeQr();
+      if (siteNav) siteNav.classList.remove('open');
+    }
   });
 
   /* ── 返回顶部 ────────────────────────────────────────────────────────── */
