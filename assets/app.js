@@ -214,7 +214,7 @@
     }
   }
 
-  if (binput) {
+  if (binput && blist) {   /* 仅检索页绑定筛选逻辑 */
     var st = readHash();
     state.g = st.g; state.q = st.q; state.ids = st.ids;
     binput.value = state.q;
@@ -225,6 +225,23 @@
       state.ids = null;
       filterCards();
       writeHash();
+    });
+  }
+
+  /* ── 大搜索框：首页提交后跳检索页；检索页就地筛选 ──────────────────── */
+  var hform = document.getElementById('hero-search');
+  if (hform) {
+    hform.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var v = (binput && binput.value) || '';
+      if (blist) {                    /* 已在检索页 */
+        state.q = v;
+        state.ids = null;
+        filterCards();
+        writeHash();
+      } else {
+        location.href = 'browse.html#q=' + encodeURIComponent(v);
+      }
     });
   }
 
