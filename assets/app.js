@@ -6,6 +6,7 @@
 (function () {
   'use strict';
 
+  var BOOK_NAME = '你不是矫情';
   var DATA = window.__SEARCH__ || [];
   var ENTRIES = DATA.filter(function (d) { return d.type === 'entry'; });
   var GROUPS = window.__GROUPS__ || [];
@@ -245,6 +246,107 @@
     });
   }
 
+  /* ── 分享：浮动按钮 + 微信二维码 / 微博 / QQ 空间 / 复制链接 ─────────── */
+  var fab = document.getElementById('share-fab');
+  var pop = document.getElementById('share-pop');
+  var qrVeil = document.getElementById('qr-veil');
+  var qrBox = document.getElementById('qr-box');
+  var qrHint = document.getElementById('qr-hint');
+  var copyLabel = document.getElementById('copy-label');
+
+  function sharePageUrl() {
+    /* file:// 打开时分享出去没有意义，退回站点首页 */
+    var u = location.href;
+    if (u.indexOf('file://') === 0) return 'https://hanbing.vercel.app/';
+    return u.split('#')[0];
+  }
+  function shareTitle() {
+    return document.title.split('　|　')[0] + '　《' + BOOK_NAME + '》';
+  }
+  function closeShare() {
+    if (pop) pop.classList.remove('open');
+    if (fab) fab.setAttribute('aria-expanded', 'false');
+  }
+  function closeQr() {
+    if (qrVeil) qrVeil.classList.remove('open');
+  }
+
+  function openWechat() {
+    if (!qrVeil || typeof qrcode !== 'function') return;
+    var qr = qrcode(0, 'M');
+    qr.addData(sharePageUrl());
+    qr.make();
+    qrBox.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 0, scalable: true });
+    qrHint.textContent = '手机微信「扫一扫」';
+    qrVeil.classList.add('open');
+    closeShare();
+  }
+
+  function copyLink() {
+    var url = sharePageUrl();
+    function ok() {
+      if (copyLabel) {
+        copyLabel.textContent = '已复制 ✓';
+        setTimeout(function () { copyLabel.textContent = '复制链接'; }, 1800);
+      }
+      closeShare();
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(ok, function () { legacyCopy(url, ok); });
+    } else {
+      legacyCopy(url, ok);
+    }
+  }
+  function legacyCopy(text, done) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); done(); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+
+  if (fab && pop) {
+    fab.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = pop.classList.toggle('open');
+      fab.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    document.addEventListener('click', function (e) {
+      if (pop.classList.contains('open') &&
+          !pop.contains(e.target) && e.target !== fab &&
+          !fab.contains(e.target)) {
+        closeShare();
+      }
+    });
+    Array.prototype.forEach.call(pop.querySelectorAll('.share-item'), function (b) {
+      b.addEventListener('click', function () {
+        var kind = b.getAttribute('data-share');
+        var url = encodeURIComponent(sharePageUrl());
+        var title = encodeURIComponent(shareTitle());
+        if (kind === 'wechat') { openWechat(); return; }
+        if (kind === 'copy') { copyLink(); return; }
+        var to;
+        if (kind === 'weibo') {
+          to = 'https://service.weibo.com/share/share.php?url=' + url + '&title=' + title;
+        } else if (kind === 'qzone') {
+          to = 'https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + url + '&title=' + title;
+        }
+        if (to) window.open(to, '_blank', 'noopener');
+        closeShare();
+      });
+    });
+  }
+  if (qrVeil) {
+    qrVeil.addEventListener('click', function (e) {
+      if (e.target === qrVeil) closeQr();
+    });
+    var qc = document.getElementById('qr-close');
+    if (qc) qc.addEventListener('click', closeQr);
+  }
+
   /* ── 键盘：/ 聚焦搜索，Esc 关闭 ─────────────────────────────────────── */
   document.addEventListener('keydown', function (e) {
     var tag = (e.target && e.target.tagName || '').toLowerCase();
@@ -253,7 +355,7 @@
       if (binput) { e.preventDefault(); binput.focus(); }
       else if (overlay) { e.preventDefault(); openSearch(); }
     }
-    if (e.key === 'Escape') { closeSearch(); }
+    if (e.key === 'Escape') { closeSearch(); closeShare(); closeQr(); }
   });
 
   /* ── 返回顶部 ────────────────────────────────────────────────────────── */

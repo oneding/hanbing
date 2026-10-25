@@ -84,6 +84,29 @@
     </div>
   </div>
 </footer>
+<button class="share-fab" id="share-fab" aria-label="分享这一页" aria-haspopup="true" aria-expanded="false">
+  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.7l6.8-4.2M8.6 13.3l6.8 4.2"/></svg>
+  <span>分享</span>
+</button>
+<div class="share-pop" id="share-pop" role="menu" aria-label="分享方式">
+  <div class="share-t">分享这一页</div>
+  <button class="share-item" data-share="wechat" role="menuitem">
+    <span class="si wx">微</span>微信（扫码）</button>
+  <button class="share-item" data-share="weibo" role="menuitem">
+    <span class="si wb">微</span>微博</button>
+  <button class="share-item" data-share="qzone" role="menuitem">
+    <span class="si qq">Q</span>QQ 空间</button>
+  <button class="share-item" data-share="copy" role="menuitem">
+    <span class="si cp">链</span><span id="copy-label">复制链接</span></button>
+</div>
+<div class="qr-veil" id="qr-veil">
+  <div class="qr-card">
+    <div class="qr-t">微信扫码，把这一页发给朋友</div>
+    <div class="qr-box" id="qr-box"></div>
+    <div class="qr-hint" id="qr-hint"></div>
+    <button class="qr-close" id="qr-close" type="button">关 闭</button>
+  </div>
+</div>
 <div class="overlay" id="overlay">
   <div class="search-box">
     <input type="text" id="s-input" placeholder="描述你现在的感受，比如：睡不着、心慌、反复想一件事" autocomplete="off">
@@ -91,6 +114,7 @@
     <div class="search-res" id="s-res"></div>
   </div>
 </div>
+<script src="assets/qrcode.js"></script>
 <script src="assets/search-data.js"></script>
 <script src="assets/app.js"></script>
 </body>
