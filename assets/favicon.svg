@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <title>你不是矫情 · 心理问题不求人</title>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdfbf6"/>
+      <stop offset="1" stop-color="#f2ebdf"/>
+    </linearGradient>
+    <linearGradient id="sail" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c9683c"/>
+      <stop offset="1" stop-color="#a8492a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 暖纸底 -->
+  <rect x="0" y="0" width="32" height="32" rx="7.5" fill="url(#paper)"/>
+  <rect x="0.6" y="0.6" width="30.8" height="30.8" rx="7"
+        fill="none" stroke="#ddd3c2" stroke-width="1.2"/>
+
+  <!-- 淡月 -->
+  <circle cx="9.2" cy="9" r="3.4" fill="#e6ddcb"/>
+  <circle cx="9.2" cy="9" r="3.4" fill="none" stroke="#d6cbb4" stroke-width=".7"/>
+
+  <!-- 远山 -->
+  <path d="M4.5 20.6 C8.6 16.4 11.4 15.8 14.6 18.2 C17 20 19.4 17.8 22.6 15 C25 12.9 27 12.8 28.6 14.2 L28.6 20.6 Z"
+        fill="#dfe3da" opacity=".8"/>
+
+  <!-- 一叶虚舟（无人空船） -->
+  <path d="M10.1 20 C11.6 24.3 20.4 24.3 21.9 20 Z" fill="#6b443d"/>
+  <path d="M15.9 9.9 V20" stroke="#6b443d" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M17.2 11.2 L21.8 19.2 L17.2 19.2 Z" fill="url(#sail)"/>
+
+  <!-- 水纹 -->
+  <path d="M5.8 26.2 H26.2" stroke="#849671" stroke-width="1.8"
+        stroke-linecap="round" opacity=".55" fill="none"/>
+  <path d="M8.6 28.8 H23.4" stroke="#849671" stroke-width="1.6"
+        stroke-linecap="round" opacity=".4" fill="none"/>
+</svg>
