@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>找找看　你不是矫情</title>
+<meta name="description" content="按感觉、场景或关键词，找到你现在需要的那一条。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="index.html">你不是矫情<span class="sm">心理问题不求人　韩冰</span></a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="菜单">≡</button>
+    <nav class="site-nav" id="site-nav">
+      <a href="index.html">开始</a>
+      <a href="browse.html" class="on">找找看</a>
+      <a href="tools.html">工具箱</a>
+      <a href="stories.html">他们的故事</a>
+      <a href="books.html">书单</a>
+      <a href="help.html">要找人帮忙</a>
+      <button class="search-btn" id="search-open">搜索 <kbd>/</kbd></button>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="sec" style="padding-top:72px">
+    <div class="narrow">
+      <h1 class="sec-t" style="font-size:31px">找找看</h1>
+      <p class="sec-s">不知道叫什么名字没关系，说人话就行。</p>
+      <form class="bigsearch" id="hero-search" autocomplete="off" style="max-width:none">
+        <input type="text" id="b-input" placeholder="睡不着 / 心慌 / 反复想一件事 / 怕猫狗 / 胃疼">
+        <button class="go" type="submit">找一找</button>
+      </form>
+      <div class="tags" id="b-tags" style="margin-top:26px">
+        <button class="tag on" data-g="">全部　61</button>
+        <button class="tag" data-g="A">焦虑与躯体化　8</button>
+        <button class="tag" data-g="B">强迫与反复　6</button>
+        <button class="tag" data-g="C">闪回与创伤　6</button>
+        <button class="tag" data-g="D">低落与耗竭　7</button>
+        <button class="tag" data-g="E">恐惧与回避　6</button>
+        <button class="tag" data-g="F">童年与家庭　6</button>
+        <button class="tag" data-g="G">情绪与脾气　6</button>
+        <button class="tag" data-g="H">自控与习惯　6</button>
+        <button class="tag" data-g="I">意义与存在　5</button>
+        <button class="tag" data-g="J">特殊状态　5</button>
+      </div>
+      <div id="b-count" style="margin-top:20px;color:var(--mute);font-size:13px"></div>
+      <div class="cards" id="b-list" style="margin-top:10px">
+        <a class="card-e" href="entry-A-01.html" data-letter="A" data-id="A-01" data-text="身上到处不舒服，可各项检查都写着「未见明显异常」 俗称：植物神经紊乱、神经衰弱、疑病；可能对应：躯体化障碍 / 躯体症状障碍（需由精神科或心理科医生诊断） 浑身不舒服，可医院查不出毛病"><span class="en">A-01　焦虑与躯体化</span><div class="et">浑身不舒服，可医院查不出毛病</div><div class="es">身上到处不舒服，可各项检查都写着「未见明显异常」</div></a>
+        <a class="card-e" href="entry-A-02.html" data-letter="A" data-id="A-02" data-text="脑子里全是「万一」，一个接一个停不下来 别名 / 俗称：想太多、焦虑症、神经衰弱；专业名词：广泛性焦虑障碍（GAD，需由精神科或心理科医生诊断） 脑子里停不下来的“万一”"><span class="en">A-02　焦虑与躯体化</span><div class="et">脑子里停不下来的“万一”</div><div class="es">脑子里全是「万一」，一个接一个停不下来</div></a>
+        <a class="card-e" href="entry-A-03.html" data-letter="A" data-id="A-03" data-text="突然心跳飙起来、喘不上气，真觉得自己要死了 别名 / 俗称：心脏神经官能症、换气过度、急性焦虑；专业名词：惊恐发作 / 惊恐障碍（需由精神科或心理科医生诊断；首次发作必须先排除心脏问题） 突然发作的惊恐：觉得自己要死了"><span class="en">A-03　焦虑与躯体化</span><div class="et">突然发作的惊恐：觉得自己要死了</div><div class="es">突然心跳飙起来、喘不上气，真觉得自己要死了</div></a>
+        <a class="card-e" href="entry-A-04.html" data-letter="A" data-id="A-04" data-text="越想睡越睡不着，睡眠成了一件要努力的事 别名 / 俗称：神经衰弱、睡眠浅、顽固性失眠；专业名词：失眠障碍 / 心理生理性失眠（需由医生诊断） 失眠：越想睡越睡不着"><span class="en">A-04　焦虑与躯体化</span><div class="et">失眠：越想睡越睡不着</div><div class="es">越想睡越睡不着，睡眠成了一件要努力的事</div></a>
+        <a class="card-e" href="entry-A-05.html" data-letter="A" data-id="A-05" data-text="躺下就开始「开会」，脑子里演到天亮 别名 / 俗称：睡前胡思乱想、脑子关不掉、内耗；心理学称“睡前反刍”，常与失眠、焦虑伴随出现，本身不是独立诊断 睡前思维风暴：躺下就开始“开会”"><span class="en">A-05　焦虑与躯体化</span><div class="et">睡前思维风暴：躺下就开始“开会”</div><div class="es">躺下就开始「开会」，脑子里演到天亮</div></a>
+        <a class="card-e" href="entry-A-06.html" data-letter="A" data-id="A-06" data-text="一查症状就觉得自己得了大病 别名 / 俗称：疑病、恐病、网络自诊；专业名词：疾病焦虑障碍 / 疑病障碍（需由精神科医生诊断） 一查症状就觉得自己得了绝症"><span class="en">A-06　焦虑与躯体化</span><div class="et">一查症状就觉得自己得了绝症</div><div class="es">一查症状就觉得自己得了大病</div></a>
+        <a class="card-e" href="entry-A-07.html" data-letter="A" data-id="A-07" data-text="肩膀脖子常年发硬，夜里还磨牙 别名 / 俗称：肌肉紧张、磨牙、筋膜炎（部分被误称颈椎病）；常与慢性压力、焦虑相关；若持续疼痛需由骨科或康复科评估 肩颈僵硬、咬牙磨牙：身体一直在使劲"><span class="en">A-07　焦虑与躯体化</span><div class="et">肩颈僵硬、咬牙磨牙：身体一直在使劲</div><div class="es">肩膀脖子常年发硬，夜里还磨牙</div></a>
+        <a class="card-e" href="entry-A-08.html" data-letter="A" data-id="A-08" data-text="一紧张就胃疼、拉肚子 别名 / 俗称：肠易激、结肠炎（常被误称）、胃肠神经官能症；专业名词：肠易激综合征（IBS，需由消化科医生诊断） 肠胃跟着情绪走：一紧张就胃疼拉肚子"><span class="en">A-08　焦虑与躯体化</span><div class="et">肠胃跟着情绪走：一紧张就胃疼拉肚子</div><div class="es">一紧张就胃疼、拉肚子</div></a>
+        <a class="card-e" href="entry-B-01.html" data-letter="B" data-id="B-01" data-text="出了门还在想：门锁了没、火关了没 俗称：强迫症、检查狂；可能对应：强迫症（OCD）中的&quot;检查型强迫&quot;（需由精神科医生诊断） 出了门还怀疑门没锁、火没关"><span class="en">B-01　强迫与反复</span><div class="et">出了门还怀疑门没锁、火没关</div><div class="es">出了门还在想：门锁了没、火关了没</div></a>
+        <a class="card-e" href="entry-B-02.html" data-letter="B" data-id="B-02" data-text="反复洗手，总觉得脏、怕细菌 别名 / 俗称：洁癖、爱干净、强迫症；专业名词：强迫症（OCD）中的清洗型强迫（需由精神科医生诊断） 反复洗手、怕脏怕细菌"><span class="en">B-02　强迫与反复</span><div class="et">反复洗手、怕脏怕细菌</div><div class="es">反复洗手，总觉得脏、怕细菌</div></a>
+        <a class="card-e" href="entry-B-03.html" data-letter="B" data-id="B-03" data-text="脑子里冒出吓人的画面或念头，越压越多 别名 / 俗称：坏念头、邪念；心理学称“侵入性思维”，常见于强迫症（需由精神科医生诊断） 脑子里冒出可怕的画面或念头"><span class="en">B-03　强迫与反复</span><div class="et">脑子里冒出可怕的画面或念头</div><div class="es">脑子里冒出吓人的画面或念头，越压越多</div></a>
+        <a class="card-e" href="entry-B-04.html" data-letter="B" data-id="B-04" data-text="一个问题在脑子里转圈，想不出答案就难受 别名 / 俗称：钻牛角尖、想不开、纠结；心理学称“穷思竭虑”，常见于强迫与焦虑（需由医生诊断） 一个问题在脑子里转圈，想不出答案就难受"><span class="en">B-04　强迫与反复</span><div class="et">一个问题在脑子里转圈，想不出答案就难受</div><div class="es">一个问题在脑子里转圈，想不出答案就难受</div></a>
+        <a class="card-e" href="entry-B-05.html" data-letter="B" data-id="B-05" data-text="事后反复回放：「我刚才是不是说错话了」 别名 / 俗称：社恐后遗症、内耗、翻旧账；心理学称“事后反刍”／强迫性回忆，常与社交焦虑、强迫相关 反复回放对话：“我刚才是不是说错话了”"><span class="en">B-05　强迫与反复</span><div class="et">反复回放对话：“我刚才是不是说错话了”</div><div class="es">事后反复回放：「我刚才是不是说错话了」</div></a>
+        <a class="card-e" href="entry-B-06.html" data-letter="B" data-id="B-06" data-text="必须数到某个数、必须摆对称才舒服 别名 / 俗称：强迫症、仪式感、讲究；专业名词：强迫症（OCD）中的计数／对称／仪式行为（需由精神科医生诊断） 必须数到某个数、必须摆对称才舒服"><span class="en">B-06　强迫与反复</span><div class="et">必须数到某个数、必须摆对称才舒服</div><div class="es">必须数到某个数、必须摆对称才舒服</div></a>
+        <a class="card-e" href="entry-C-01.html" data-letter="C" data-id="C-01" data-text="痛苦的画面会突然回到眼前，像又发生了一次 俗称：闪回、画面回放、又想起来了；可能对应：创伤后应激障碍（PTSD）的侵入性回忆（需由精神科医生诊断） 痛苦的画面突然回到眼前"><span class="en">C-01　闪回与创伤</span><div class="et">痛苦的画面突然回到眼前</div><div class="es">痛苦的画面会突然回到眼前，像又发生了一次</div></a>
+        <a class="card-e" href="entry-C-02.html" data-letter="C" data-id="C-02" data-text="说不清为什么，突然崩溃，满心羞耻 俗称：说不上来的崩溃、矫情、玻璃心；常见于长期压力或复杂性创伤（建议由心理咨询师或精神科医生评估） 莫名其妙的崩溃与羞耻"><span class="en">C-02　闪回与创伤</span><div class="et">莫名其妙的崩溃与羞耻</div><div class="es">说不清为什么，突然崩溃，满心羞耻</div></a>
+        <a class="card-e" href="entry-C-03.html" data-letter="C" data-id="C-03" data-text="反复做噩梦，梦见的还是过去的事 俗称：做噩梦、梦魇、睡不踏实；可能对应：创伤相关噩梦／梦魇障碍（需由精神科或睡眠门诊医生诊断） 反复做噩梦，梦见过去的事"><span class="en">C-03　闪回与创伤</span><div class="et">反复做噩梦，梦见过去的事</div><div class="es">反复做噩梦，梦见的还是过去的事</div></a>
+        <a class="card-e" href="entry-C-04.html" data-letter="C" data-id="C-04" data-text="一句话、一个场景就能把情绪点炸 俗称：一点就炸、玻璃心、情绪失控；可能对应：情绪淹没／过度唤起（如持续且影响生活，需由精神科医生诊断） 被一句话、一个场景触发，情绪洪水般涌来"><span class="en">C-04　闪回与创伤</span><div class="et">被一句话、一个场景触发，情绪洪水般涌来</div><div class="es">一句话、一个场景就能把情绪点炸</div></a>
+        <a class="card-e" href="entry-C-05.html" data-letter="C" data-id="C-05" data-text="一点动静就吓一跳，睡得极浅 俗称：一惊一乍、神经衰弱、觉浅；可能对应：过度警觉／高警觉（常见于创伤后应激，需由精神科医生诊断） 一点动静就吓一跳，睡得很浅"><span class="en">C-05　闪回与创伤</span><div class="et">一点动静就吓一跳，睡得很浅</div><div class="es">一点动静就吓一跳，睡得极浅</div></a>
+        <a class="card-e" href="entry-C-06.html" data-letter="C" data-id="C-06" data-text="伤早就好了，人没跟着好 俗称：吓出毛病了、落下心理阴影；可能对应：医疗创伤／事故后应激反应（需由精神科医生诊断） 事故或手术过去很久了，身体好了心没好"><span class="en">C-06　闪回与创伤</span><div class="et">事故或手术过去很久了，身体好了心没好</div><div class="es">伤早就好了，人没跟着好</div></a>
+        <a class="card-e" href="entry-D-01.html" data-letter="D" data-id="D-01" data-text="什么都没意思，怎么都开心不起来 俗称：没劲、麻木、心死了；专业名词：快感缺失（anhedonia），常见于抑郁症（需由精神科医生诊断） 什么都没意思，开心不起来了"><span class="en">D-01　低落与耗竭</span><div class="et">什么都没意思，开心不起来了</div><div class="es">什么都没意思，怎么都开心不起来</div></a>
+        <a class="card-e" href="entry-D-02.html" data-letter="D" data-id="D-02" data-text="起床都费劲，什么都懒得做 俗称：没动力、拖延、废了；专业名词：动机缺乏／意志减退，常见于抑郁症（需由精神科医生诊断）；对应方法：行为激活 起床都困难，什么都懒得做"><span class="en">D-02　低落与耗竭</span><div class="et">起床都困难，什么都懒得做</div><div class="es">起床都费劲，什么都懒得做</div></a>
+        <a class="card-e" href="entry-D-03.html" data-letter="D" data-id="D-03" data-text="过去的事反复咀嚼，停不下来 俗称：钻牛角尖、想不开、内耗；专业名词：反刍思维（rumination） 反复咀嚼过去的事，停不下来"><span class="en">D-03　低落与耗竭</span><div class="et">反复咀嚼过去的事，停不下来</div><div class="es">过去的事反复咀嚼，停不下来</div></a>
+        <a class="card-e" href="entry-D-04.html" data-letter="D" data-id="D-04" data-text="出了事什么都往自己身上揽 俗称：自我攻击、内耗、老怪自己；专业名词：过度自责／适应不良的自我批评 出了事什么都怪自己"><span class="en">D-04　低落与耗竭</span><div class="et">出了事什么都怪自己</div><div class="es">出了事什么都往自己身上揽</div></a>
+        <a class="card-e" href="entry-D-05.html" data-letter="D" data-id="D-05" data-text="「活着到底为了什么」这个问题绕不开 俗称：空虚、没奔头、找不到意义；专业名词：意义感缺失／存在性空虚（若伴随持续低落，需由精神科医生诊断是否抑郁症） 活着到底为了什么"><span class="en">D-05　低落与耗竭</span><div class="et">活着到底为了什么</div><div class="es">「活着到底为了什么」这个问题绕不开</div></a>
+        <a class="card-e" href="entry-D-06.html" data-letter="D" data-id="D-06" data-text="在外面好好的，一回家就垮 俗称：微笑型抑郁、高功能抑郁、人前笑人后哭；可能对应：抑郁症的一种表现型（需由精神科医生诊断） 在外面很好，回家就垮"><span class="en">D-06　低落与耗竭</span><div class="et">在外面很好，回家就垮</div><div class="es">在外面好好的，一回家就垮</div></a>
+        <a class="card-e" href="entry-D-07.html" data-letter="D" data-id="D-07" data-text="一到阴雨天或冬天就提不起劲 俗称：冬困、季节性犯懒、阴天就丧；可能对应：季节性抑郁／季节性情绪波动（需由精神科医生诊断） 一到阴雨天、冬天就提不起劲"><span class="en">D-07　低落与耗竭</span><div class="et">一到阴雨天、冬天就提不起劲</div><div class="es">一到阴雨天或冬天就提不起劲</div></a>
+        <a class="card-e" href="entry-E-01.html" data-letter="E" data-id="E-01" data-text="怕猫狗这类小动物 俗称：怕狗、怕猫、动物恐惧；可能对应：特定恐惧症（动物型，需由精神科或心理科医生诊断） 怕猫狗等动物"><span class="en">E-01　恐惧与回避</span><div class="et">怕猫狗等动物</div><div class="es">怕猫狗这类小动物</div></a>
+        <a class="card-e" href="entry-E-02.html" data-letter="E" data-id="E-02" data-text="怕高、怕水、怕坐飞机 俗称：恐高、怕水、飞行恐惧；可能对应：特定恐惧症（自然环境型 / 情境型，需由精神科或心理科医生诊断） 怕高、怕水、怕坐飞机"><span class="en">E-02　恐惧与回避</span><div class="et">怕高、怕水、怕坐飞机</div><div class="es">怕高、怕水、怕坐飞机</div></a>
+        <a class="card-e" href="entry-E-03.html" data-letter="E" data-id="E-03" data-text="怕电梯、怕关不出去的小空间 俗称：幽闭恐惧、不敢坐电梯；可能对应：特定恐惧症（情境型，需由精神科或心理科医生诊断） 怕电梯、怕狭小空间"><span class="en">E-03　恐惧与回避</span><div class="et">怕电梯、怕狭小空间</div><div class="es">怕电梯、怕关不出去的小空间</div></a>
+        <a class="card-e" href="entry-E-04.html" data-letter="E" data-id="E-04" data-text="怕被人看着、怕当众说话 俗称：社恐、脸皮薄、不敢见人；可能对应：社交焦虑障碍（需由精神科或心理科医生诊断） 社交恐惧：怕被注视、怕当众发言"><span class="en">E-04　恐惧与回避</span><div class="et">社交恐惧：怕被注视、怕当众发言</div><div class="es">怕被人看着、怕当众说话</div></a>
+        <a class="card-e" href="entry-E-05.html" data-letter="E" data-id="E-05" data-text="不敢打电话、怕麻烦别人 俗称：电话恐惧、不敢麻烦人；可能对应：社交焦虑的表现之一 / 求助回避（若严重影响生活需由医生评估） 不敢打电话、怕麻烦别人"><span class="en">E-05　恐惧与回避</span><div class="et">不敢打电话、怕麻烦别人</div><div class="es">不敢打电话、怕麻烦别人</div></a>
+        <a class="card-e" href="entry-E-06.html" data-letter="E" data-id="E-06" data-text="不敢一个人出门、不敢去人多的地方 俗称：不敢出门、离不开人；可能对应：广场恐惧（常与惊恐障碍相关，需由精神科或心理科医生诊断） 不敢一个人出门、不敢去人多的地方"><span class="en">E-06　恐惧与回避</span><div class="et">不敢一个人出门、不敢去人多的地方</div><div class="es">不敢一个人出门、不敢去人多的地方</div></a>
+        <a class="card-e" href="entry-F-01.html" data-letter="F" data-id="F-01" data-text="总觉得自己的童年缺了点什么 俗称：原生家庭不好、童年创伤、小时候缺爱；相关概念：童年逆境经历、复杂性创伤（若影响严重需由精神科或心理科医生评估） 我好像没有一个幸福的童年"><span class="en">F-01　童年与家庭</span><div class="et">我好像没有一个幸福的童年</div><div class="es">总觉得自己的童年缺了点什么</div></a>
+        <a class="card-e" href="entry-F-02.html" data-letter="F" data-id="F-02" data-text="做什么都很想要一句肯定 俗称：讨好型人格、老好人、求夸奖；相关概念：条件性自我价值、取悦行为（一般不属于疾病诊断） 总是渴望被认可"><span class="en">F-02　童年与家庭</span><div class="et">总是渴望被认可</div><div class="es">做什么都很想要一句肯定</div></a>
+        <a class="card-e" href="entry-F-03.html" data-letter="F" data-id="F-03" data-text="总在试探对方会不会走 俗称：缺安全感、太黏人、患得患失；相关概念：焦虑型依恋（依恋类型不是疾病诊断） 害怕被抛弃，关系里总在试探"><span class="en">F-03　童年与家庭</span><div class="et">害怕被抛弃，关系里总在试探</div><div class="es">总在试探对方会不会走</div></a>
+        <a class="card-e" href="entry-F-04.html" data-letter="F" data-id="F-04" data-text="对父母又恨又愧疚 俗称：又想怨又心软、和家里处不来；相关概念：情感矛盾、家庭关系中的忠诚冲突（一般不属于疾病诊断） 对父母又恨又愧疚"><span class="en">F-04　童年与家庭</span><div class="et">对父母又恨又愧疚</div><div class="es">对父母又恨又愧疚</div></a>
+        <a class="card-e" href="entry-F-05.html" data-letter="F" data-id="F-05" data-text="越长大越像自己的爸妈 俗称：活成了自己最讨厌的样子；相关概念：教养方式的代际传递（不是疾病诊断） 我怎么越来越像我爸妈了"><span class="en">F-05　童年与家庭</span><div class="et">我怎么越来越像我爸妈了</div><div class="es">越长大越像自己的爸妈</div></a>
+        <a class="card-e" href="entry-F-06.html" data-letter="F" data-id="F-06" data-text="心里好像空了一块，怎么都填不满 俗称：空虚、没意思、心里发空；相关概念：空虚感、慢性无聊（若长期严重需评估是否与抑郁或其他问题相关） 心里空一块，填不满"><span class="en">F-06　童年与家庭</span><div class="et">心里空一块，填不满</div><div class="es">心里好像空了一块，怎么都填不满</div></a>
+        <a class="card-e" href="entry-G-01.html" data-letter="G" data-id="G-01" data-text="一点就着，发完火又后悔 俗称：脾气爆、点火就着、炮仗脾气；可能对应：愤怒管理困难 / 间歇性暴怒障碍（需由精神科医生诊断） 一点就着，事后又后悔"><span class="en">G-01　情绪与脾气</span><div class="et">一点就着，事后又后悔</div><div class="es">一点就着，发完火又后悔</div></a>
+        <a class="card-e" href="entry-G-02.html" data-letter="G" data-id="G-02" data-text="哭不出来，什么都感觉不到 俗称：心麻了、木了、行尸走肉；可能对应：情绪麻木 / 情感隔离（常见于抑郁、长期压力、创伤后状态，需由医生评估） 哭不出来，什么都感觉不到"><span class="en">G-02　情绪与脾气</span><div class="et">哭不出来，什么都感觉不到</div><div class="es">哭不出来，什么都感觉不到</div></a>
+        <a class="card-e" href="entry-G-03.html" data-letter="G" data-id="G-03" data-text="见不得别人好，心里直泛酸 俗称：嫉妒、酸、红眼病；心理学名词：社会比较、嫉妒（envy） 见不得别人好，心里直泛酸"><span class="en">G-03　情绪与脾气</span><div class="et">见不得别人好，心里直泛酸</div><div class="es">见不得别人好，心里直泛酸</div></a>
+        <a class="card-e" href="entry-G-04.html" data-letter="G" data-id="G-04" data-text="骨子里觉得自己不够好 俗称：自卑、自我否定、玻璃心；心理学名词：羞耻感（shame），需与内疚（guilt）区分 总觉得自己不够好，骨子里羞"><span class="en">G-04　情绪与脾气</span><div class="et">总觉得自己不够好，骨子里羞</div><div class="es">骨子里觉得自己不够好</div></a>
+        <a class="card-e" href="entry-G-05.html" data-letter="G" data-id="G-05" data-text="什么都往自己身上揽，总觉得是自己的错 俗称：老好人、心太软、过度自责；心理学名词：过度责任感 / 过量内疚 什么都往自己身上揽，总觉得是自己的错"><span class="en">G-05　情绪与脾气</span><div class="et">什么都往自己身上揽，总觉得是自己的错</div><div class="es">什么都往自己身上揽，总觉得是自己的错</div></a>
+        <a class="card-e" href="entry-G-06.html" data-letter="G" data-id="G-06" data-text="心里憋着一股无名火，看什么都不顺眼 俗称：肝火旺、烦躁、心里毛躁；可能对应：弥散性愤怒 / 慢性易激惹（可见于抑郁、焦虑、长期压力、睡眠不足等，需由医生评估） 心里憋着一股无名火，看什么都不顺眼"><span class="en">G-06　情绪与脾气</span><div class="et">心里憋着一股无名火，看什么都不顺眼</div><div class="es">心里憋着一股无名火，看什么都不顺眼</div></a>
+        <a class="card-e" href="entry-H-01.html" data-letter="H" data-id="H-01" data-text="太想做好，反而一直拖着不动 俗称：想太多不敢下手、要求太高；心理学名词：完美主义型拖延 / 评价焦虑 太追求完美，反而一直拖着不动"><span class="en">H-01　自控与习惯</span><div class="et">太追求完美，反而一直拖着不动</div><div class="es">太想做好，反而一直拖着不动</div></a>
+        <a class="card-e" href="entry-H-02.html" data-letter="H" data-id="H-02" data-text="明知道该做，就是动不了 俗称：拖延症、懒癌、等会儿再说；心理学名词：拖延（procrastination）/ 经验性回避 明知道该做，就是做不了"><span class="en">H-02　自控与习惯</span><div class="et">明知道该做，就是做不了</div><div class="es">明知道该做，就是动不了</div></a>
+        <a class="card-e" href="entry-H-03.html" data-letter="H" data-id="H-03" data-text="手机一刷就停不下来 俗称：手机上瘾、刷刷刷；可能对应：问题性手机使用 / 行为成瘾（是否构成需由医生评估） 手机和短视频，一刷就停不下来"><span class="en">H-03　自控与习惯</span><div class="et">手机和短视频，一刷就停不下来</div><div class="es">手机一刷就停不下来</div></a>
+        <a class="card-e" href="entry-H-04.html" data-letter="H" data-id="H-04" data-text="报复性熬夜，舍不得这一天过去 俗称：舍不得睡、夜里才是我自己的时间；心理学名词：睡眠拖延（bedtime procrastination） 报复性熬夜：白天不属于我，晚上补回来"><span class="en">H-04　自控与习惯</span><div class="et">报复性熬夜：白天不属于我，晚上补回来</div><div class="es">报复性熬夜，舍不得这一天过去</div></a>
+        <a class="card-e" href="entry-H-05.html" data-letter="H" data-id="H-05" data-text="一难受就想吃，吃完更难受 俗称：情绪性进食、压力胖；心理学名词：情绪性进食（反复失控的暴食需由医生诊断） 一难受就想吃，吃完更难受"><span class="en">H-05　自控与习惯</span><div class="et">一难受就想吃，吃完更难受</div><div class="es">一难受就想吃，吃完更难受</div></a>
+        <a class="card-e" href="entry-H-06.html" data-letter="H" data-id="H-06" data-text="选什么都难，选完就后悔 俗称：选择困难症、纠结、买完就悔；心理学名词：最大化倾向（maximizing）与决策疲劳 选什么都难，选完就后悔"><span class="en">H-06　自控与习惯</span><div class="et">选什么都难，选完就后悔</div><div class="es">选什么都难，选完就后悔</div></a>
+        <a class="card-e" href="entry-I-01.html" data-letter="I" data-id="I-01" data-text="突然问自己：人生就这样了吗 俗称：中年危机、四十焦虑、男人的叛逆期；心理学称：中年转折（midlife transition），非医学诊断，不是病 中年危机：人生就这样了吗"><span class="en">I-01　意义与存在</span><div class="et">中年危机：人生就这样了吗</div><div class="es">突然问自己：人生就这样了吗</div></a>
+        <a class="card-e" href="entry-I-02.html" data-letter="I" data-id="I-02" data-text="怕死怕到睡不着 俗称：怕死、死亡恐惧、夜里越想越怕；心理学称：死亡焦虑（death anxiety），属于普遍的人类处境，不是疾病诊断 死亡焦虑：怕死怕到睡不着"><span class="en">I-02　意义与存在</span><div class="et">死亡焦虑：怕死怕到睡不着</div><div class="es">怕死怕到睡不着</div></a>
+        <a class="card-e" href="entry-I-03.html" data-letter="I" data-id="I-03" data-text="身边有人陪，还是很孤独 俗称：心里空、没人懂我、假热闹；心理学称：孤独感（loneliness），与&quot;社会孤立&quot;不是一回事；长期存在需警惕抑郁 明明有人陪，却还是很孤独"><span class="en">I-03　意义与存在</span><div class="et">明明有人陪，却还是很孤独</div><div class="es">身边有人陪，还是很孤独</div></a>
+        <a class="card-e" href="entry-I-04.html" data-letter="I" data-id="I-04" data-text="一切都顺利，心里却空得很 俗称：空心病、没劲、人生没意义；说明：空心病是国内教育界提出的一种描述性说法，不是国际诊断体系中的正式疾病名称；若长期低落需由医生判断是否达到抑郁症 一切都很顺利，却觉得空洞"><span class="en">I-04　意义与存在</span><div class="et">一切都很顺利，却觉得空洞</div><div class="es">一切都顺利，心里却空得很</div></a>
+        <a class="card-e" href="entry-I-05.html" data-letter="I" data-id="I-05" data-text="总觉得自己在演，早晚会被拆穿 俗称：冒名顶替、假装有本事、心虚；心理学称：冒名顶替感 / 冒名顶替现象（impostor phenomenon），不是正式诊断，也不是能力不足的证据 总觉得自己在演，早晚会被拆穿"><span class="en">I-05　意义与存在</span><div class="et">总觉得自己在演，早晚会被拆穿</div><div class="es">总觉得自己在演，早晚会被拆穿</div></a>
+        <a class="card-e" href="entry-J-01.html" data-letter="J" data-id="J-01" data-text="看世界像隔着一层玻璃，什么都不真实 俗称：魂不附体、像在做梦、发飘；可能对应：现实解体 / 人格解体（derealization / depersonalization），属于解离体验，不是精神分裂症的前兆（需由精神科医生评估） 觉得世界不真实，像隔着一层玻璃"><span class="en">J-01　特殊状态</span><div class="et">觉得世界不真实，像隔着一层玻璃</div><div class="es">看世界像隔着一层玻璃，什么都不真实</div></a>
+        <a class="card-e" href="entry-J-02.html" data-letter="J" data-id="J-02" data-text="喘不上气、手脚发麻、指尖抽成一团 俗称：换气过度、气不够用、手抽筋；可能对应：过度换气综合征 / 呼吸性碱中毒（需由医生评估，并先排除哮喘、心脏问题） 喘不上气、手脚发麻、指尖抽搐"><span class="en">J-02　特殊状态</span><div class="et">喘不上气、手脚发麻、指尖抽搐</div><div class="es">喘不上气、手脚发麻、指尖抽成一团</div></a>
+        <a class="card-e" href="entry-J-03.html" data-letter="J" data-id="J-03" data-text="疼了很久，疼痛和情绪互相喂养 俗称：老毛病、陈年腰痛、浑身酸痛；可能对应：慢性疼痛 / 慢性原发性疼痛（需由疼痛科或相关科室医生诊断，并先排除器质性疾病） 长期慢性疼痛与情绪互相喂养"><span class="en">J-03　特殊状态</span><div class="et">长期慢性疼痛与情绪互相喂养</div><div class="es">疼了很久，疼痛和情绪互相喂养</div></a>
+        <a class="card-e" href="entry-J-04.html" data-letter="J" data-id="J-04" data-text="每个月那几天整个人崩掉 俗称：经前综合征、那几天、大姨妈脾气；可能对应：经前期综合征（PMS）；症状更重、以情绪为主时可能对应经前烦躁障碍（PMDD）——需由妇科或精神科医生诊断，不要自行贴标签 经前那几天情绪完全崩塌"><span class="en">J-04　特殊状态</span><div class="et">经前那几天情绪完全崩塌</div><div class="es">每个月那几天整个人崩掉</div></a>
+        <a class="card-e" href="entry-J-05.html" data-letter="J" data-id="J-05" data-text="大考、面试临场崩盘 俗称：考试焦虑、晕场、发挥失常、脑子一片空白；可能对应：考试焦虑 / 情境性焦虑（严重并影响功能时需由医生评估） 大考、面试前临场崩溃"><span class="en">J-05　特殊状态</span><div class="et">大考、面试前临场崩溃</div><div class="es">大考、面试临场崩盘</div></a>
+      </div>
+      <div id="b-none" class="none" style="display:none">没有匹配的条目。换个说法，或者点上面的「全部」从头看。</div>
+    </div>
+  </section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="fx">
+      <div>
+        <div>%s　%s　著</div>
+        <div style="margin-top:6px">大众心理自查与自助工具书　61 个条目 · 20 个工具 · 20 份自修样本</div>
+      </div>
+      <div class="fl">
+        <a href="index.html">开始</a>
+        <a href="browse.html">找找看</a>
+        <a href="tools.html">工具箱</a>
+        <a href="stories.html">他们的故事</a>
+        <a href="books.html">书单</a>
+        <a href="help.html">要找人帮忙</a>
+      </div>
+    </div>
+    <div style="margin-top:28px;padding-top:20px;border-top:1px solid var(--hair);color:var(--mute);font-size:12.5px">
+      本书内容不能替代诊断与治疗。如有持续困扰或自伤念头，请前往精神科就诊，或拨打 24 小时心理援助热线 12356。
+    </div>
+  </div>
+</footer>
+<div class="overlay" id="overlay">
+  <div class="search-box">
+    <input type="text" id="s-input" placeholder="描述你现在的感受，比如：睡不着、心慌、反复想一件事" autocomplete="off">
+    <div class="search-hint">敲几个字就能搜　·　Esc 关闭</div>
+    <div class="search-res" id="s-res"></div>
+  </div>
+</div>
+<script src="assets/search-data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
