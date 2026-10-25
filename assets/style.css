@@ -391,6 +391,15 @@ a{color:inherit;}
 .crumb{font-size:13px; color:var(--mute); margin:0 0 var(--s-5);}
 .crumb a{color:var(--ash); text-decoration:none;}
 .crumb a:hover{color:var(--clay);}
+.e-nav{
+  display:flex; align-items:baseline; flex-wrap:wrap; gap:14px 26px;
+  margin-top:var(--s-6); padding-top:18px; border-top:1px solid var(--hair);
+}
+.e-nav a{
+  font-size:14px; color:var(--stone); text-decoration:none;
+  transition:color .25s ease;
+}
+.e-nav a:hover{color:var(--clay);}
 .e-head{margin:0 0 var(--s-7);}
 .e-num{
   font-family:var(--mono); font-size:12px; letter-spacing:.2em;
