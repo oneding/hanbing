@@ -522,10 +522,24 @@ a{color:inherit;}
 .bk{
   background:var(--surface); border:1px solid var(--hair);
   border-radius:var(--r-lg); padding:22px 24px; margin:0 0 16px;
+  display:flex; gap:18px; align-items:flex-start;
 }
+.bk-img{
+  width:66px; flex:none; border-radius:5px;
+  box-shadow:0 2px 8px rgba(60,45,30,.16);
+  background:var(--canvas);
+}
+.bk-main{flex:1; min-width:0;}
 .bk-t{font-family:var(--serif); font-size:19px; font-weight:400; margin:0 0 10px; text-indent:0;}
 .bk-t .bk-a{font-family:var(--sans); font-size:12.5px; color:var(--mute); margin-left:10px;}
 .bk p{margin:0 0 10px; font-size:15px; line-height:1.82; color:var(--stone); text-indent:0;}
+.bk-buy{
+  display:inline-block; margin-top:4px;
+  font-size:12.5px; color:var(--clay); text-decoration:none;
+  border:1px solid var(--hair-2); border-radius:var(--r-full);
+  padding:6px 15px; transition:color .2s ease, background .2s ease, border-color .2s ease;
+}
+.bk-buy:hover{color:#fff; background:var(--clay); border-color:var(--clay);}
 .bk p:last-child{margin-bottom:0;}
 .tier{margin-bottom:var(--s-8);}
 .tier-t{
